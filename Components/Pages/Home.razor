@@ -1,7 +1,29 @@
 ﻿@page "/"
+@inject NavigationManager Navigation
 
 <PageTitle>Ticket#</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>Ticket#</h1>
 
-Welcome to your new app.
+<table>
+    <tr>
+        <td>
+            <button @onclick="NavigateToGenerator">Ticket erstellen</button>
+        </td>
+        <td>
+            <button @onclick="NavigateToReader">Ticket lesen</button>
+        </td>
+    </tr>
+</table>
+
+@code
+{
+    private void NavigateToGenerator()
+    {
+        Navigation.NavigateTo("/generator");
+    }
+    private void NavigateToReader()
+    {
+        Navigation.NavigateTo("/reader");
+    }
+}
