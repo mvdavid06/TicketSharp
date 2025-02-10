@@ -1,9 +1,17 @@
 ﻿@page "/reader"
 @inject DataService Data
+@rendermode InteractiveServer
 
-<h3>Reader</h3>
+<h1>Ticket auslesen</h1>
+
+@ConvertToHash()
 
 @code
 {
+    string normaltest = "abcdefg";
 
+    private string ConvertToHash()
+    {
+        return normaltest.GetHashCode().ToString();
+    }
 }

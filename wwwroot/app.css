@@ -4,7 +4,7 @@ body {
     font-style: normal;
     background-color: #333332;
     color: #ffffff;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     height: 100%;
